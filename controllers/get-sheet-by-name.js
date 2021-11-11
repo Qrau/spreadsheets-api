@@ -19,6 +19,9 @@ exports.getSheetByName = async (req, res, next) => {
     });
     res.send(getRows.data);
   } catch (err) {
-    next("check key and value to the headers, for example.. name: page-name");
+    next(
+      "check the key and value of your call headers, for example.. name: page-name"
+    );
+    // console.log(err);
   }
 };
